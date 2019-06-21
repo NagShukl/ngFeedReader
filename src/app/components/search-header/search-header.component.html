@@ -1,0 +1,17 @@
+<div class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+    <div class="row topRow">
+      <div class="col-2">
+    <a class="navbar-brand" href="#">
+      <img src="https://avatars2.githubusercontent.com/u/12188789?s=40&v=4" width="35" height="35" alt="">
+    </a>
+  </div>
+  <div class="col-10 text-center noRpad">
+    <form class="form-inline mr-sm-0" (ngSubmit)="performSearchClick()" #searchForm="ngForm">
+      <input class="form-control mr-sm-0" type="text" name="searchTag"
+      placeholder="Insert tags (use spaces for multiple)"
+      [(ngModel)]="searchTag" required minlength="3">
+      <button class="btn btn-success mr-sm-0" type="submit" [disabled]="!searchForm.form.valid">Search</button>
+    </form>
+  </div>
+  </div>
+</div>
