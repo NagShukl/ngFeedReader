@@ -6,10 +6,9 @@ import {FeedImage} from '../../services/model/feed-image.model';
 @Component({
   selector: 'app-feed-list',
   templateUrl: './feed-list.component.html',
-  styleUrls: ['./feed-list.component.css']
+  styleUrls: ['./feed-list.component.scss']
 })
 export class FeedListComponent implements OnInit {
-  // @Input() searchTag: string;
   feedImages: FeedImage[];
   private eventsSubscription: any
 

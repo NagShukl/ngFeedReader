@@ -1,0 +1,37 @@
+$card-width: 330px;
+.card {
+    width: $card-width;
+    .card-img-top {
+        height: $card-width;
+    }
+    .card-title {
+        white-space   : nowrap;
+        text-overflow : ellipsis;
+        overflow      : hidden;
+        font-size     : 1rem;
+        margin-bottom: 0.5rem;
+        min-height: 1rem;
+        max-height: 1rem;
+    }
+    .card-text {
+        line-height: 1rem;
+        margin-bottom: 0.15rem;
+        .date-title {
+            font-size     : 0.7rem;
+            color: lightgray;
+            font-weight: bold;
+            
+        }
+        
+    }
+    .btn {
+        padding: 0.07rem 0.75rem;
+    }
+}
+.tags-list {
+    min-height: 3rem;
+    max-height: 3rem;
+    font-size: 0.7rem;
+    text-overflow : ellipsis;
+    overflow      : hidden;
+}

@@ -26,7 +26,7 @@ export class FeedProviderService {
         return response.items.map(item => {
           return {
             title: item.title,
-            link: item.link,
+            link: item.media.m,
             date_taken: item.date_taken,
             published: item.published,
             author: item.author,

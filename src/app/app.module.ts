@@ -8,13 +8,15 @@ import {
 import { AppComponent } from './app.component';
 import { SearchHeaderComponent } from './components/search-header/search-header.component';
 import { FeedListComponent } from './components/feed-list/feed-list.component';
+import { FeedItemComponent } from './services/feed-item/feed-item.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchHeaderComponent,
-    FeedListComponent
+    FeedListComponent,
+    FeedItemComponent
   ],
   imports: [
     BrowserModule,

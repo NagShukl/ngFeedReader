@@ -1,4 +1,6 @@
-<p>
-  feed-list works! {{searchTag}}
- 
-</p>
+<ul class="nav listContainer">
+  <li *ngFor="let item of feedImages" class="nav-item cardListItem">
+      <app-feed-item [feedImage]="item"></app-feed-item>
+  </li>
+</ul>
+

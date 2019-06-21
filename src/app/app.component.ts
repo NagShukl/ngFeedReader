@@ -11,7 +11,7 @@ export class AppComponent {
   // searchTag: string;
   private eventsSubject: Subject<string> = new Subject<string>();
   performSearchAction(s: string) {
-alert('**JSR,..'+s);
+
 // this.searchTag = s;
 this.eventsSubject.next(s);
   }
