@@ -5,16 +5,10 @@
 export const environment = {
   production: false,
   API_URL: 'https://api.flickr.com/services/feeds/photos_public.gne?format=json&jsoncallback=JSONP_CALLBACK',
-   NO_IMAGE_TITLE: 'No Image found',
-   NO_IMAGE_URL: 'https://cdn3.iconfinder.com/data/icons/abstract-1/512/no_image-512.png',
-   AUTHOR: 'Nagendra Shukla'
+  NO_IMAGE_TITLE: 'No Image found',
+  NO_IMAGE_URL: 'https://cdn3.iconfinder.com/data/icons/abstract-1/512/no_image-512.png',
+  AUTHOR: 'Nagendra Shukla',
+  GIT_PROJECT_URL: 'https://github.com/NagShukl/ngFeedReader',
+  AUTHOR_POFILE_IMG: 'https://avatars2.githubusercontent.com/u/12188789?s=40&v=4'
 };
 
-/*
- * For easier debugging in development mode, you can import the following file
- * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
- *
- * This import should be commented out in production mode because it will have a negative impact
- * on performance if an error is thrown.
- */
-// import 'zone.js/dist/zone-error';  // Included with Angular CLI.

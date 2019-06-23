@@ -4,11 +4,11 @@ import { FeedItemComponent } from './feed-item.component';
 
 const FeedImageMock = {
   title: '',
-    link: '',
-    date_taken: new Date(),
-    published: new Date(),
-    author: '',
-    tags: '',
+  link: '',
+  date_taken: new Date(),
+  published: new Date(),
+  author: '',
+  tags: '',
 }
 describe('FeedItemComponent', () => {
   let component: FeedItemComponent;
@@ -16,14 +16,14 @@ describe('FeedItemComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FeedItemComponent ],
-      imports: [ ],
+      declarations: [FeedItemComponent],
+      imports: [],
       providers: [
-       // {provide: FeedImage, useClass: FeedImageMock}
+        // {provide: FeedImage, useClass: FeedImageMock}
       ]
 
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

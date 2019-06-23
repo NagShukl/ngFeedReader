@@ -7,15 +7,10 @@ import { Subject } from 'rxjs'
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  // title = 'ngFeedReader';
-  // searchTag: string;
-  private eventsSubject: Subject<string> = new Subject<string>();
-  performSearchAction(s: string) {
 
-// this.searchTag = s;
-this.eventsSubject.next(s);
+  private eventsSubject: Subject<string> = new Subject<string>();
+
+  performSearchAction(tag: string) {
+    this.eventsSubject.next(tag);
   }
-  // emitEventToChild() {
-  //   this.eventsSubject.next()
-  // }
 }

@@ -15,7 +15,6 @@ export class FeedListComponent implements OnInit {
 
   @Input() events: Observable<string>;
 
-
   constructor(private feedProviderService: FeedProviderService) { }
 
   ngOnInit() {
@@ -26,7 +25,7 @@ export class FeedListComponent implements OnInit {
     this.feedProviderService.getPublicPhotosData(searchTag)
       .subscribe((feedImages: FeedImage[]): void => {
         this.feedImages = feedImages;
-        this.handleNoImageFound(searchTag);        
+        this.handleNoImageFound(searchTag);
       });
   }
   handleNoImageFound(searchTag: string) {
