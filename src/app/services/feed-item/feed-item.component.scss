@@ -1,17 +1,27 @@
 $card-width: 330px;
+$card-border-radius: 1.75rem;
 .card {
     width: $card-width;
+    border-radius: $card-border-radius;
+    .card-body {
+        padding-bottom: 0.5rem;
+    }
+    img {
+        border-top-left-radius: $card-border-radius;
+        border-top-right-radius: $card-border-radius;
+    }
     .card-img-top {
-        height: $card-width;
+        height: $card-width;        
     }
     .card-title {
-        white-space   : nowrap;
-        text-overflow : ellipsis;
-        overflow      : hidden;
-        font-size     : 1rem;
-        margin-bottom: 0.5rem;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        font-size: 1rem;
+        margin-bottom: 0.3rem;
         min-height: 1rem;
-        max-height: 1rem;
+        margin-top: -0.9rem;
+        max-height: 1.7rem;
     }
     .card-text {
         line-height: 1rem;
@@ -25,7 +35,8 @@ $card-width: 330px;
         
     }
     .btn {
-        padding: 0.07rem 0.75rem;
+        padding: 0.07rem $card-border-radius;
+        float: right;
     }
 }
 .tags-list {
