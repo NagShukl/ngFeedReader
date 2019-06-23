@@ -3,6 +3,10 @@ See it working live [here](https://nagshukl.github.io/ngFeedReader/).
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.2.
 
+# Application views
+![Mobile view](https://photos.app.goo.gl/yYunxfspMeDxWwho6)
+![Desktop view](https://photos.app.goo.gl/iG8eRBRijwkMTuf78)
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
