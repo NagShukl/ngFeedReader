@@ -8,7 +8,7 @@ import {
 import { AppComponent } from './app.component';
 import { SearchHeaderComponent } from './components/search-header/search-header.component';
 import { FeedListComponent } from './components/feed-list/feed-list.component';
-import { FeedItemComponent } from './services/feed-item/feed-item.component';
+import { FeedItemComponent } from './components/feed-item/feed-item.component';
 
 
 @NgModule({
@@ -23,6 +23,9 @@ import { FeedItemComponent } from './services/feed-item/feed-item.component';
     FormsModule,
     HttpClientJsonpModule,
     HttpClientModule
+  ],
+  exports: [
+    SearchHeaderComponent, FeedListComponent, FeedItemComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
