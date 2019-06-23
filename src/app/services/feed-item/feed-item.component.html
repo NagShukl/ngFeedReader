@@ -6,6 +6,7 @@
       <p class="card-text"><span class="date-title">Clicked On:</span> {{feedImage.date_taken | date}}</p>
       <p class="card-text"><span class="date-title">Published On: </span>{{feedImage.published | date}}</p>
       <p class="card-text tags-list"><span class="date-title">Tags: </span>{{feedImage.tags}}</p>
-      <a href="{{feedImage.link}}" class="btn btn-primary" target="_blank">Show Image</a>
+      <a href="{{feedImage.link}}" class="btn btn-primary" target="_blank"
+      *ngIf="feedImage.title !== 'No Image found'">Show Image</a>
     </div>
   </div>

@@ -8,5 +8,4 @@ import { FeedImage } from '../../services/model/feed-image.model';
 })
 export class FeedItemComponent {
   @Input() feedImage: FeedImage;
-
 }
