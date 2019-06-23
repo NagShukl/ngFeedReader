@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Observable } from 'rxjs'
-import {FeedProviderService} from '../../services/feed-provider.service';
-import {FeedImage} from '../../services/model/feed-image.model';
+import { FeedProviderService } from '../../services/feed-provider.service';
+import { FeedImage } from '../../services/model/feed-image.model';
 
 @Component({
   selector: 'app-feed-list',
@@ -12,7 +12,7 @@ export class FeedListComponent implements OnInit {
   feedImages: FeedImage[];
   private eventsSubscription: any
 
-@Input() events: Observable<string>;
+  @Input() events: Observable<string>;
 
 
   constructor(private feedProviderService: FeedProviderService) { }
@@ -25,8 +25,6 @@ export class FeedListComponent implements OnInit {
     this.feedProviderService.getPublicPhotosData(searchTag)
       .subscribe((feedImages: FeedImage[]): void => {
         this.feedImages = feedImages;
-        console.log('**JSR,...feedImages='+this.feedImages.length);
-        console.log('**JSR,...feedImages=',this.feedImages);
       });
   }
   ngOnDestroy() {
