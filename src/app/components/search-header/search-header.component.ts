@@ -13,7 +13,22 @@ export class SearchHeaderComponent implements OnInit {
 
   ngOnInit() {
   }
-  performSearchClick() {
-    this.searchAction.emit(this.searchTag.split(' ').join(','));
+  performSearchClick(tag) {
+    console.log('searchTag => '+tag);
+  //   if(this.searchTag == "") {
+  //     alert("You either clicked the X or you searched for nothing.");
+  // }
+  // else {
+  //     alert("You searched for " + this.searchTag);
+  // }
+    this.searchAction.emit(tag.split(' ').join(','));
   }
+  // clearSearch() {
+  //   if(this.searchTag == "") {
+  //     alert("You either clicked the X or you searched for nothing.");
+  // }
+  // else {
+  //     alert("You searched for " + this.searchTag);
+  // }
+  // }
 }

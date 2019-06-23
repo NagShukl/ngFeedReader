@@ -1,16 +1,17 @@
 <div class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
     <div class="row topRow">
-      <div class="col-2">
-    <a class="navbar-brand" href="#">
-      <img src="https://avatars2.githubusercontent.com/u/12188789?s=40&v=4" width="35" height="35" alt="">
-    </a>
-  </div>
-  <div class="col-10 text-center noRpad">
-    <form class="form-inline mr-sm-0" (ngSubmit)="performSearchClick()" #searchForm="ngForm">
-      <input class="form-control mr-sm-0" type="text" name="searchTag"
-      placeholder="Insert tags (use spaces for multiple)"
+      
+  <div class="noRpad">
+      <a class="navbar-brand" href="https://github.com/NagShukl/ngFeedReader" target="_blank">
+          <img src="https://avatars2.githubusercontent.com/u/12188789?s=40&v=4" width="25" height="25" alt="">
+        </a>
+    <form class="search-control mr-sm-0"  #searchForm="ngForm">
+      <input class="mr-sm-0" type="search" #searchkey name="searchTag" (search)="performSearchClick(searchkey.value)"
+      placeholder="Filter tags..." autocomplete="off"
       [(ngModel)]="searchTag" required minlength="3">
-      <button class="btn btn-success mr-sm-0" type="submit" [disabled]="!searchForm.form.valid">Search</button>
+      <button class="btn btn-success mr-sm-0" (click)="performSearchClick(searchkey.value)" [disabled]="!searchForm.form.valid">
+          <img src="https://img.icons8.com/ios/50/000000/detective.png">
+      </button>
     </form>
   </div>
   </div>

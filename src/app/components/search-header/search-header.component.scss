@@ -1,12 +1,57 @@
-.form-control {
-    width: 70%;
-}
-.form-inline {
-    width: 100%;
-}
 .topRow {
     width: 100%;
-}
 .noRpad {
     padding-right: 0px;
+    width: 100%;
+    vertical-align: middle;
+    .search-control {
+        width: 100%;
+        // display: inline;
+        padding: 3px;
+        margin-left: 1%;
+        vertical-align: middle;
+        text-align: center;
+        :focus{
+            outline: none;
+        }
+        input {
+            width: 75%;
+            border-top-left-radius: 0.75rem;
+    border-bottom-left-radius: 0.75rem;
+            border: 2px solid #ffca28;
+            border-right: none;
+            :focus{
+                outline: none;
+            }
+        }
+            button {
+                // display: inline;
+                position: relative;
+                height: 30px;
+                border: 2px solid #ffca28;
+                border-left: none;
+                border-top-right-radius: 0.75rem;
+    border-bottom-right-radius: 0.75rem;
+    margin-top: -6px;
+    margin-left: -1px;
+            img {
+                width: 10px;
+                height: 10px;
+                margin-top: -2px;
+                margin-left: -3px;
+                // display: inline;
+                float: right;
+            }
+            }
+        
+    }
+    a {
+        float: left;
+        img {
+            float: left;
+            vertical-align: middle;
+        }
+    }
+    
+}
 }
