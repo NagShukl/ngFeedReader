@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Observable } from 'rxjs'
 import { FeedProviderService } from '../../services/feed-provider.service';
 import { FeedImage } from '../../services/model/feed-image.model';
-import { AppConstants } from '../utils/appConstants'
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-feed-list',
@@ -32,11 +32,11 @@ export class FeedListComponent implements OnInit {
   handleNoImageFound(searchTag: string) {
     if (this.feedImages.length === 0) {
       this.feedImages.push({
-        title: AppConstants.NO_IMAGE_TITLE,
-        link: AppConstants.NO_IMAGE_URL,
+        title: environment.NO_IMAGE_TITLE,
+        link: environment.NO_IMAGE_URL,
         date_taken: new Date(),
         published: new Date(),
-        author: AppConstants.AUTHOR,
+        author: environment.AUTHOR,
         tags: searchTag
       });
     }
