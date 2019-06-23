@@ -9,7 +9,7 @@ const FeedImageMock = {
   published: new Date(),
   author: '',
   tags: '',
-}
+};
 describe('FeedItemComponent', () => {
   let component: FeedItemComponent;
   let fixture: ComponentFixture<FeedItemComponent>;

@@ -27,7 +27,7 @@ describe('SearchHeaderComponent', () => {
     expect(component).toBeTruthy();
   });
   it('should render git profile image', () => {
-    const fixture = TestBed.createComponent(SearchHeaderComponent);
+    fixture = TestBed.createComponent(SearchHeaderComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('.navbar-brand').href).toContain(environment.GIT_PROJECT_URL);
@@ -36,14 +36,14 @@ describe('SearchHeaderComponent', () => {
     expect(compiled.querySelector('.search-control > button')).toBeTruthy();
   });
   it('should render Search input text and button', () => {
-    const fixture = TestBed.createComponent(SearchHeaderComponent);
+    fixture = TestBed.createComponent(SearchHeaderComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('.search-control > input')).toBeTruthy();
     expect(compiled.querySelector('.search-control > button')).toBeTruthy();
   });
   it(`should execute performSearchClick`, () => {
-    const fixture = TestBed.createComponent(SearchHeaderComponent);
+    fixture = TestBed.createComponent(SearchHeaderComponent);
     const app = fixture.debugElement.componentInstance;
     const tag = 'jaishriram';
     app.performSearchClick(tag);

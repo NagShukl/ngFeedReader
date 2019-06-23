@@ -81,6 +81,7 @@ describe('FeedProviderService', () => {
 
             httpMock
                 .expectOne(
+                    // tslint:disable-next-line:max-line-length
                     `https://api.flickr.com/services/feeds/photos_public.gne?format=json&jsoncallback=JSONP_CALLBACK&JSONP_CALLBACK=JSONP_CALLBACK`
                 )
                 .flush(mockResponse);
@@ -98,6 +99,7 @@ describe('FeedProviderService', () => {
 
             httpMock
                 .expectOne(
+                    // tslint:disable-next-line:max-line-length
                     `https://api.flickr.com/services/feeds/photos_public.gne?format=json&jsoncallback=JSONP_CALLBACK&tags=jaishriram&JSONP_CALLBACK=JSONP_CALLBACK`
                 )
                 .flush(mockResponse);

@@ -1,5 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Observable } from 'rxjs'
+import { Component, OnInit, Input, OnDestroy } from '@angular/core';
+import { Observable } from 'rxjs';
 import { FeedProviderService } from '../../services/feed-provider.service';
 import { FeedImage } from '../../services/model/feed-image.model';
 import { environment } from '../../../environments/environment';
@@ -9,7 +9,7 @@ import { environment } from '../../../environments/environment';
   templateUrl: './feed-list.component.html',
   styleUrls: ['./feed-list.component.scss']
 })
-export class FeedListComponent implements OnInit {
+export class FeedListComponent implements OnInit, OnDestroy {
   feedImages: FeedImage[];
   private eventsSubscription: any;
 
@@ -19,7 +19,7 @@ export class FeedListComponent implements OnInit {
 
   ngOnInit() {
     this.fetchFeed();
-    this.eventsSubscription = this.events.subscribe((searchTag) => this.fetchFeed(searchTag))
+    this.eventsSubscription = this.events.subscribe((searchTag) => this.fetchFeed(searchTag));
   }
   private fetchFeed(searchTag?: string): void {
     this.feedProviderService.getPublicPhotosData(searchTag)
@@ -41,6 +41,6 @@ export class FeedListComponent implements OnInit {
     }
   }
   ngOnDestroy() {
-    this.eventsSubscription.unsubscribe()
+    this.eventsSubscription.unsubscribe();
   }
 }

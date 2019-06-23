@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Subject } from 'rxjs'
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +8,7 @@ import { Subject } from 'rxjs'
 })
 export class AppComponent {
 
-  private eventsSubject: Subject<string> = new Subject<string>();
+  public eventsSubject: Subject<string> = new Subject<string>();
 
   performSearchAction(tag: string) {
     this.eventsSubject.next(tag);

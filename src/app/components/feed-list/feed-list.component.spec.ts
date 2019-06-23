@@ -13,7 +13,7 @@ const FeedImageMock = {
   published: new Date(),
   author: '',
   tags: '',
-}
+};
 const feedImages: FeedImage[] = [
   {
     title: 'first image',
@@ -68,7 +68,7 @@ describe('FeedListComponent', () => {
     expect(component).toBeTruthy();
   });
   it(`should handle noImage found`, () => {
-    const fixture = TestBed.createComponent(FeedListComponent);
+    fixture = TestBed.createComponent(FeedListComponent);
     const app = fixture.debugElement.componentInstance;
     const tag = 'jaishriram';
     app.feedImages = [];
