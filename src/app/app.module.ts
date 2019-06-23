@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import {
   HttpClientJsonpModule,
   HttpClientModule
@@ -22,12 +23,14 @@ import { FeedItemComponent } from './components/feed-item/feed-item.component';
     BrowserModule,
     FormsModule,
     HttpClientJsonpModule,
-    HttpClientModule
+    HttpClientModule,
+    HttpClientTestingModule
   ],
-  exports: [
-    SearchHeaderComponent, FeedListComponent, FeedItemComponent
+  providers: [
+    HttpClientJsonpModule,
+    HttpClientModule,
+    HttpClientTestingModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

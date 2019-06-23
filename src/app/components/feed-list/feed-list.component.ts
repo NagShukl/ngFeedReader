@@ -11,7 +11,7 @@ import { environment } from '../../../environments/environment';
 })
 export class FeedListComponent implements OnInit {
   feedImages: FeedImage[];
-  private eventsSubscription: any
+  private eventsSubscription: any;
 
   @Input() events: Observable<string>;
 
